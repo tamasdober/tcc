@@ -1,0 +1,39 @@
+
+PURPOSE OF THE PROJECT
+======================
+
+This is a very limited POC (proof of concept) type of project, just to show some basic actions with Selenium.
+It uses only chromedriver, relying on a previous installation on a MacOS machine.
+There are multiple ways of installing chromedriver on Windows so you can run Selenium.
+
+I used Python as with Java the setup could have been more complex - and the code would have been less similar to Ruby.
+
+RUNNING THE TESTS
+=================
+
+The test can be run from command line via the running_with_nose2_localhost.sh script or from an IDE like PyCharm.
+The base_path is purposefully part of the script to avoid hard-coding it into the code.
+Basically one could run the same tests against different installations (local,stage or prod).
+Depending on the features, more input data can be supplied from the startup script.
+
+USING  NOSE2 TESTING FRAMEWORK
+==============================
+
+Previously I was using nose2 because in its config file (nose2_localhost.cfg) one can specify
+outputting XML Test Reports and the result XML file can be used by Jenkins as an input for reporting.
+
+Another advantage of config file is that one can specify the type of tests to be run.
+It can be achieved by the test-file-pattern property, which helps adding tests with a specific name pattern.
+In our case all tests with the name *_ui_tests.py will be run as part of the test suite.
+
+Please note that there are other popular testing frameworks in Python; nose2 - https://docs.nose2.io/en/latest/ -
+may or may not be a good fit for a specific project.
+
+ABOUT PAGE OBJECT MODEL
+=======================
+
+The implementation drives to provide a Page Object Model (POM) structure.
+Under the 'tcc' folder there are 3 main folders: pom, tests and utilities.
+The 'pom' folder consists of 2 sub-folders: one for locators (for Selenium) and another one for the pages.
+All the pages inherit from the BasePage so that they can be created by passing in the driver and the  base_path.
+The tests inherit from from TestCase class from unittest package.

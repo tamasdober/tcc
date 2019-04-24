@@ -1,0 +1,14 @@
+<testsuite errors="0" failures="0" name="nose2-junit" skipped="0" tests="4" time="16.545">
+  <testcase classname="tcc.tests.home_page_ui_tests.HomePageTests" name="test_home_page_contact_button_available" time="4.525713">
+    <system-out />
+  </testcase>
+  <testcase classname="tcc.tests.home_page_ui_tests.HomePageTests" name="test_home_page_displays" time="3.622532">
+    <system-out />
+  </testcase>
+  <testcase classname="tcc.tests.contact_page_ui_tests.ContactPageTests" name="test_contact_page_displays" time="3.996215">
+    <system-out />
+  </testcase>
+  <testcase classname="tcc.tests.contact_page_ui_tests.ContactPageTests" name="test_filling_in_contact_form" time="4.399077">
+    <system-out />
+  </testcase>
+</testsuite>
